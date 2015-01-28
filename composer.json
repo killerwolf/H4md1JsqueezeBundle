@@ -1,0 +1,17 @@
+{
+    "name": "h4md1/jsqueeze-bundle",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Hamdi LAADHARI",
+            "email": "killerwolf06@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/twig-bundle": "~2.5",
+        "patchwork/jsqueeze": "~2.0"
+    },
+    "autoload": {
+        "psr-4": { "H4md1\\JsqueezeBundle\\": "" }
+    },
+}
