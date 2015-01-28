@@ -13,5 +13,5 @@
     },
     "autoload": {
         "psr-4": { "H4md1\\JsqueezeBundle\\": "" }
-    },
+    }
 }
