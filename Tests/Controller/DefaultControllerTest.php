@@ -1,6 +1,6 @@
 <?php
 
-namespace H4md1\JSqueezeBundle\Tests\Controller;
+namespace H4md1\JsqueezeBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

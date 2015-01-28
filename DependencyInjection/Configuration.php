@@ -1,6 +1,6 @@
 <?php
 
-namespace H4md1\JSqueezeBundle\DependencyInjection;
+namespace H4md1\JsqueezeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
