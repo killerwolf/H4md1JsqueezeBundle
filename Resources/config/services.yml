@@ -2,3 +2,7 @@ services:
 #    h4md1_j_squeeze.example:
 #        class: H4md1\JsqueezeBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+    h4md1_jsqueeze.twig_extension:
+        class: H4md1\JsqueezeBundle\Twig\JsqueezeExtension
+        tags:
+            - { name: twig.extension }
