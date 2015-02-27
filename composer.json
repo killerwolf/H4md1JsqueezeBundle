@@ -1,6 +1,8 @@
 {
     "name": "h4md1/jsqueeze-bundle",
     "type": "symfony-bundle",
+    "license": "MIT",
+    "description": "This bundle allows you to use jsqueeze in your twig template."
     "authors": [
         {
             "name": "Hamdi LAADHARI",
