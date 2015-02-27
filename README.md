@@ -3,6 +3,7 @@ H4md1JsqueezeBundle
 =====================
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/073aa16d-fe30-40e3-ad30-745b33d2a440/big.png)](https://insight.sensiolabs.com/projects/073aa16d-fe30-40e3-ad30-745b33d2a440)
+
 This bundle allows you to use jsqueeze in your twig template.
 
 Installation
@@ -41,23 +42,23 @@ Enable the bundle in the kernel:
 Usage
 -----
 
-{% block content %}
-    <h1>Hello {{ name }}!</h1>
-    <script>
-        {%- jsqueeze -%}
-        (function(str)
-        {
-            var newstr;
-            if('' !== str){
-                newstr = str+'#'+str;
-            }
-            else{
-                newstr = 'empty';
-            }
-        })('twice');
-        {%- endjsqueeze -%}
-    </script>
-{% endblock %}
+    {% block content %}
+        <h1>Hello {{ name }}!</h1>
+        <script>
+            {%- jsqueeze -%}
+            (function(str)
+            {
+                var newstr;
+                if('' !== str){
+                    newstr = str+'#'+str;
+                }
+                else{
+                    newstr = 'empty';
+                }
+            })('twice');
+            {%- endjsqueeze -%}
+        </script>
+    {% endblock %}
 
 this with will output
 
