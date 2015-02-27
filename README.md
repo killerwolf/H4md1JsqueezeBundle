@@ -10,38 +10,59 @@ Installation
 
 ### Step 1: Install H4md1JsqueezeBundle using [Composer](http://getcomposer.org)
 
-Add MediaApiBundle in your `composer.json`:
+Add JsqueezeBundle in your `composer.json`:
 
-{
-    "require": {
-        "h4md1/jsqueeze-bundle": "dev-master"
+    {
+        "require": {
+            "h4md1/jsqueeze-bundle": "dev-master"
+        }
     }
-}
 
 Now tell composer to download the bundle by running the command:
 
-$ php composer.phar update h4md1/jsqueeze-bundle
+    $ php composer.phar update h4md1/jsqueeze-bundle
 
 ### Step 2: Enable the bundle
 
 Enable the bundle in the kernel:
 
-<?php
+    <?php
 
-// app/AppKernel.php
-public function registerBundles()
-{
-    $bundles = array(
-        // ...
-        new H4md1\JsqueezeBundle\H4md1JsqueezeBundle(),
-        // ...
-        );
-    }
+    // app/AppKernel.php
+    public function registerBundles()
+    {
+        $bundles = array(
+            // ...
+            new H4md1\JsqueezeBundle\H4md1JsqueezeBundle(),
+            // ...
+            );
+        }
 
 Usage
 -----
-soon
 
+{% block content %}
+    <h1>Hello {{ name }}!</h1>
+    <script>
+        {%- jsqueeze -%}
+        (function(str)
+        {
+            var newstr;
+            if('' !== str){
+                newstr = str+'#'+str;
+            }
+            else{
+                newstr = 'empty';
+            }
+        })('twice');
+        {%- endjsqueeze -%}
+    </script>
+{% endblock %}
+
+this with will output
+
+    <h1>Hello {{ name }}!</h1>
+    <script>(function(e){var i;if(''!==e){i=e+'#'+e}else{i='empty'}})('twice');</script>
 
 Known limitations and bugs
 -----
