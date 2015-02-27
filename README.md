@@ -60,7 +60,7 @@ Usage
         </script>
     {% endblock %}
 
-this with will output
+the code bellow will output
 
     <h1>Hello {{ name }}!</h1>
     <script>(function(e){var i;if(''!==e){i=e+'#'+e}else{i='empty'}})('twice');</script>
