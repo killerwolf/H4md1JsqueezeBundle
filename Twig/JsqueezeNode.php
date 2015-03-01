@@ -14,21 +14,21 @@ class JsqueezeNode extends \Twig_Node
 
     public function compile(\Twig_Compiler $compiler)
     {
-        //var_dump($this->getNode('body'));die();
+        //dump($this->getNode('body'));
         $minifiedJs = (new JSqueeze())->squeeze(
-            $this->getNode('body')->getAttribute('data'),
+            'plip',//$this->getNode('body')->getAttribute('data'),
             true,   // $singleLine
             true,   // $keepImportantComments
             false   // $specialVarRx
         );
 
         $bodyNode = $this->getNode('body');
-        $bodyNode->setAttribute('data', $minifiedJs);
+        //$bodyNode->setAttribute('data', $minifiedJs);
         $compiler
             ->addDebugInfo($this)
             ->write("ob_start();\n")
             ->subcompile($bodyNode)
-            ->write("echo(ob_get_clean()");
-        $compiler->raw(");\n");
+            ->write("echo((new \Patchwork\JSqueeze())->squeeze(ob_get_clean(),true,true,false));\n");
+            //->raw(");\n");
     }
 }
